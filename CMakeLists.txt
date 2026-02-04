@@ -18,10 +18,12 @@ include(GNUInstallDirs)
 include(GenerateExportHeader)
 include(CMakePackageConfigHelpers)
 
-find_package(${QTX} COMPONENTS Core REQUIRED)
+find_package(${QTX} COMPONENTS Core Test REQUIRED)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(Systemd REQUIRED libsystemd)
+
+enable_testing()
 
 write_basic_package_version_file(
     JournalToFileConfigVersion.cmake
@@ -45,5 +47,6 @@ install(EXPORT JournalToFileExport
 
 add_subdirectory(app)
 add_subdirectory(lib)
+add_subdirectory(tests)
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
