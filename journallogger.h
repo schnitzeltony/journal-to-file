@@ -4,6 +4,7 @@
 #include "abstractjournallogger.h"
 #include <QSocketNotifier>
 #include <systemd/sd-journal.h>
+#include <memory>
 
 class JournalLogger : public AbstractJournalLogger
 {
