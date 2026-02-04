@@ -10,7 +10,7 @@ class JournalLogger : public AbstractJournalLogger
 {
     Q_OBJECT
 public:
-    JournalLogger(sd_journal *journalHandle);
+    explicit JournalLogger(sd_journal *journalHandle);
 
 private slots:
     void readEntries();

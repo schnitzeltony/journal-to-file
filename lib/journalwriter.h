@@ -8,7 +8,7 @@ class JournalWriter : public QObject
 {
     Q_OBJECT
 public:
-    JournalWriter(std::shared_ptr<AbstractJournalLogger> journalLogger);
+    explicit JournalWriter(std::shared_ptr<AbstractJournalLogger> journalLogger);
 
 private slots:
     void onLineAdded(const double &timeStamp,
