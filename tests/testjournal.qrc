@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>testjournal/test_logs.journal</file>
+    </qresource>
+</RCC>

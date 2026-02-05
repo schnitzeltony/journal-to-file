@@ -1,5 +1,13 @@
 #include "abstractjournallogger.h"
 
+Q_DECLARE_METATYPE(AbstractJournalLogger::LinePriorities)
+
+AbstractJournalLogger::AbstractJournalLogger()
+{
+    static bool registered = false;
+    if (!registered)
+        qRegisterMetaType<LinePriorities>();
+}
 
 QString AbstractJournalLogger::getPrioText(LinePriorities prio)
 {
