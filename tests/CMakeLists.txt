@@ -7,6 +7,7 @@ function(SETUP_QTESTS)
         add_executable(${_testname}
             ${_testname}.h
             ${_testname}.cpp
+            testjournal.qrc
             )
         target_link_libraries(${_testname}
             PUBLIC

@@ -7,7 +7,13 @@ class test_journallogger : public QObject
 {
     Q_OBJECT
 private slots:
-    void journalPlayground();
+    void init();
+    void cleanup();
+    void analyzeTestJournal();
+
+private:
+    void createTestJournal(); // to run make it a test (=move up)
+    void feedEventLoop();
 };
 
 #endif // TEST_JOURNALLOGGER_H

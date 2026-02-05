@@ -17,7 +17,9 @@ public:
         AUDIT,
         UNKNOWN
     };
+    AbstractJournalLogger();
     static QString getPrioText(LinePriorities prio);
+    static void registerMeta();
 
 signals:
     void sigLineAdd(const double &timeStamp,
